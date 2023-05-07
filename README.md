@@ -61,11 +61,15 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource | Service Tier | Monthly Cost |
-| ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
+| Azure Resource            | Service Tier | Monthly Cost |
+| ------------              | ------------ | ------------ |
+| *Azure Postgres Database* | General Purpose, 4 vCores, 100 GB Storage | 267.29 USD  |
+| *Azure Service Bus*       | Premium, 1 Daily Message Unit | 668.00 USD      |
+| *Azure App Service*       | Premium v3 P1v3: 2 Core, 8 GB Ram, 250 GB Storage | 113.15 USD       |
+| *Azure Function*          | Elastic Premium EP1: 1 Core, 3.5 GB Ram, 250 GB Storage             | 157.717 USD     |
 
 ## Architecture Explanation
 This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+- For the Azure Web App, I have used it for the web server. It can provide us with better efficiency and more scalability for our servers. So that, we can easily scale up or down the server without any impact when a mount of visitor changed.
+
+- For Azure Function, I have used it for the server message. Because we don't need to push notifications all the time and Azure functionality is suitable for asynchronous tasks, so that we can improve performance and reliability of the application, then save much budget without losing any availability features that we no need.
